@@ -35,4 +35,5 @@ func TestBuildAppService(t *testing.T) {
 	require.NotNil(t, appService)
 	require.Equal(t, "ok", appService.Healthz())
 	require.Equal(t, "ok -> foo bar", appService.FooBar())
+	require.Equal(t, "Hello, Ann!", appService.Greet("Ann"))
 }
